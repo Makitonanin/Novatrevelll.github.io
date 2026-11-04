@@ -1,0 +1,790 @@
+
+:root {
+    --navy: #173d32;
+    --navy2: #245344;
+    --teal: #287b70;
+    --aqua: #c5ddd2;
+    --sand: #f7f4ec;
+    --orange: #bd914d;
+    --ink: #263e36;
+    --muted: #77877e;
+    --white: #fff;
+    --line: #e8e8df;
+    --shadow: 0 18px 50px rgba(23, 61, 50, .09);
+}
+html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;color:var(--ink);font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6;background:#fff}a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit}button{cursor:pointer}.container{width:min(1160px,calc(100% - 48px));margin:auto}.section{padding:100px 0}.site-header{height:82px;position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(14px);border-bottom:1px solid rgba(9,45,67,.07)}.header-inner{height:100%;display:flex;align-items:center;gap:25px}.brand{display:flex;align-items:center;gap:10px;font-size:21px;font-weight:750;letter-spacing:-.7px;white-space:nowrap}.brand b{color:var(--teal)}.brand-mark{width:35px;height:35px;display:grid;place-items:center;border-radius:11px;background:var(--teal);color:#fff;font-family:Georgia,serif;font-size:24px;font-style:italic}.main-nav{display:flex;align-items:center;justify-content:center;gap:19px;flex:1}.main-nav a{font-size:12px;font-weight:650;color:#425b65;transition:color .2s}.main-nav a:hover{color:var(--orange)}.header-contact{display:flex;flex-direction:column;line-height:1.4;white-space:nowrap}.header-contact a{font-weight:750;font-size:13px}.header-contact small{font-size:10px;color:var(--muted)}.btn{display:inline-flex;align-items:center;justify-content:center;gap:18px;padding:15px 23px;border:0;border-radius:7px;font-size:13px;font-weight:750;transition:transform .2s,box-shadow .2s,background .2s}.btn:hover{transform:translateY(-2px);box-shadow:0 10px 22px #092d4326}.btn-orange{background:var(--orange);color:#fff}.btn-small{padding:12px 15px;font-size:11px}.menu-toggle{display:none;background:none;border:0;padding:8px}.menu-toggle span{display:block;width:23px;height:2px;background:var(--navy);margin:5px}
+.hero{position:relative;min-height:650px;display:flex;align-items:center;overflow:hidden;color:#fff;background:radial-gradient(ellipse at 75% 35%,#267f83 0%,transparent 36%),linear-gradient(115deg,#082a40 0%,#104b60 58%,#1c7374 100%)}.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,28,43,.35),transparent 75%);pointer-events:none}.hero-pattern{position:absolute;inset:0;opacity:.22;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 650'%3E%3Cpath d='M0 480L170 310l100 100 190-250 210 240 160-170 210 210 130-140 270 220v130H0Z' fill='none' stroke='%23d9f0e9' stroke-width='2'/%3E%3Cpath d='M0 550l210-140 130 100 220-200 200 190 170-110 210 160 140-100 160 100v100H0Z' fill='%23d9f0e9' fill-opacity='.12'/%3E%3C/svg%3E");background-size:cover;background-position:center bottom}.hero-content{position:relative;z-index:2;padding-top:20px;padding-bottom:45px}.eyebrow{display:block;text-transform:uppercase;letter-spacing:2.1px;font-size:10px;font-weight:800;color:var(--teal);margin-bottom:15px}.eyebrow-light{color:#b3dcd4}.hero h1{font-size:clamp(42px,6vw,72px);line-height:1.08;letter-spacing:-2.7px;max-width:780px;margin:0 0 23px;font-weight:760}.hero h1 em,.section h2 em{font-family:Georgia,serif;font-weight:500;color:#f4a66c}.hero-content>p{max-width:560px;color:#d5e4e5;font-size:17px;margin:0 0 30px}.hero-actions{display:flex;gap:13px}.btn-glass{border:1px solid #ffffff75;color:#fff;background:#ffffff0d}.hero-note{margin-top:55px;font-size:11px;color:#d5e4e5}.note-dot{display:inline-block;width:7px;height:7px;background:#f2a46a;border-radius:50%;margin-right:9px}.hero-bottom{position:absolute;z-index:2;bottom:22px;left:50%;transform:translateX(-50%);width:min(1160px,calc(100% - 48px));display:flex;justify-content:space-between;color:#c5d8d8;font-size:9px;letter-spacing:1.4px;text-transform:uppercase}
+.section-heading{display:flex;align-items:end;justify-content:space-between;gap:35px;margin-bottom:40px}.section h2{font-size:clamp(32px,4vw,46px);line-height:1.15;letter-spacing:-1.6px;margin:0;color:var(--navy)}.section h2 em{color:var(--teal)}.section-heading>p,.center-heading>p{max-width:360px;color:var(--muted);font-size:13px;margin:0 0 5px}.tour-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.tour-card{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#fff;transition:transform .25s,box-shadow .25s}.tour-card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}.tour-visual{height:175px;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;font-size:58px}.tour-visual:before,.gallery-tile:before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,#ffffff18,transparent 55%),radial-gradient(ellipse at 70% 20%,#ffffff33,transparent 50%)}.tour-visual span{position:relative;filter:drop-shadow(0 8px 8px #092d4330)}.tour-tag{position:absolute;top:14px;left:14px;background:#fff;color:var(--teal);border-radius:30px;padding:5px 10px;font-size:9px;font-weight:800;letter-spacing:.4px}.tour-body{padding:21px}.tour-meta{display:flex;justify-content:space-between;color:var(--muted);font-size:11px;margin-bottom:8px}.tour-body h3{font-size:19px;color:var(--navy);margin:0 0 8px}.tour-body p{font-size:12px;color:var(--muted);min-height:42px;margin:0 0 18px}.tour-foot{border-top:1px solid var(--line);padding-top:15px;display:flex;align-items:center;justify-content:space-between}.tour-price{font-size:19px;font-weight:800;color:var(--navy)}.tour-price small{display:block;font-size:9px;color:var(--muted);font-weight:500}.tour-book{border:0;background:var(--sand);color:var(--navy);border-radius:6px;padding:10px 13px;font-size:11px;font-weight:750}.tour-book:hover{background:var(--orange);color:white}.catalog-note,.demo-note{font-size:10px;color:#91a0a4;margin-top:22px}.loading-state{grid-column:1/-1;padding:40px;text-align:center;color:var(--muted)}
+.advantages-section{background:#f7f8f5}.center-heading{text-align:center;max-width:650px;margin:0 auto 45px}.center-heading>p{max-width:530px;margin:15px auto 0}.advantage-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.advantage-card{padding:25px 22px;background:#fff;border:1px solid #edf0ec;border-radius:9px;min-height:170px}.adv-icon{width:38px;height:38px;display:grid;place-items:center;border-radius:10px;background:#e8f3ef;color:var(--teal);font-size:19px;font-weight:800;margin-bottom:16px}.advantage-card h3{font-size:14px;color:var(--navy);margin:0 0 7px}.advantage-card p{font-size:11px;color:var(--muted);margin:0;line-height:1.6}
+.stats-section{background:var(--teal);color:#fff;padding:52px 0}.stats-grid{display:grid;grid-template-columns:repeat(3,1fr)}.stat{text-align:center;border-right:1px solid #ffffff3b}.stat:last-child{border:0}.stat strong{display:block;font-size:48px;line-height:1.1;letter-spacing:-2px}.stat span{font-size:11px;color:#d5e9e3;letter-spacing:1px;text-transform:uppercase}
+.about-layout{display:grid;grid-template-columns:1fr 1fr;gap:95px;align-items:center}.about-art{min-height:410px;position:relative;border-radius:12px;overflow:hidden;background:linear-gradient(150deg,#1a6470,#0b344c 65%,#d6a16f);display:flex;align-items:end;padding:35px}.about-art:before{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#092d43a8,transparent 65%),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 450'%3E%3Cpath d='M0 340L125 190l90 80L350 80l250 280v90H0Z' fill='%23d7e9d9' fill-opacity='.23'/%3E%3Cpath d='M0 390l190-140 110 80 120-125 180 180v65H0Z' fill='%23092d43' fill-opacity='.42'/%3E%3C/svg%3E") center/cover}.about-art-main{position:relative;color:#fff}.about-art-main span{font-size:10px;letter-spacing:4px}.about-art-main strong{display:block;font-family:Georgia,serif;font-size:40px;line-height:1.08;font-weight:500;margin-top:13px}.about-stamp{position:absolute;right:25px;top:25px;width:83px;height:83px;border:1px solid #ffffff9c;border-radius:50%;display:grid;place-content:center;text-align:center;color:#fff;font-size:10px;line-height:1.25;letter-spacing:2px;transform:rotate(12deg)}.about-stamp b{font-size:12px}.about-copy h2{margin-bottom:23px}.about-copy p{font-size:13px;color:var(--muted);line-height:1.9}.text-link{display:inline-flex;gap:22px;align-items:center;color:var(--teal);font-size:12px;font-weight:800;margin-top:15px}.text-link span{font-size:19px;transition:transform .2s}.text-link:hover span{transform:translateX(5px)}
+/* ГАЛЕРЕЯ NOVA TRAVEL */
+
+.gallery-section {
+    background: var(--sand);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr;
+    grid-template-rows: 190px 190px;
+    gap: 14px;
+}
+
+.gallery-tile {
+    position: relative;
+    overflow: hidden;
+    border: 0;
+    border-radius: 9px;
+    padding: 18px;
+    display: flex;
+    align-items: end;
+    text-align: left;
+    color: #fff;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.gallery-tile::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        0deg,
+        rgba(6, 31, 50, .8),
+        transparent 70%
+    );
+}
+
+.gallery-tile:hover {
+    transform: scale(1.02);
+    box-shadow: 0 12px 30px rgba(23, 61, 50, .18);
+}
+
+.gallery-tile span {
+    position: relative;
+    z-index: 2;
+    font-size: 12px;
+    font-weight: 750;
+}
+
+/* Фотографии из static/img */
+
+.tile-canyon {
+    grid-row: span 2;
+    background-image: url("/static/img/sulak.png");
+}
+
+.tile-derbent {
+    background-image: url("/static/img/derbent.png");
+}
+
+/* Пока нет фотографий — временные фоны */
+
+.tile-mountains {
+    background-image: linear-gradient(135deg, #b5c6a3, #437d79, #173f56);
+}
+
+.tile-sand {
+    background-image: linear-gradient(135deg, #f1c77d, #d58c4d, #7c5a43);
+}
+
+.tile-village {
+    background-image: linear-gradient(135deg, #a8b99d, #637f72, #243f4d);
+}
+
+.tile-sea {
+    background-image: linear-gradient(135deg, #a7d7d0, #398b9a, #124c68);
+}
+
+/* Мобильная версия */
+
+@media (max-width: 600px) {
+    .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 155px 155px 155px;
+        gap: 9px;
+    }
+
+    .tile-canyon {
+        grid-row: span 2;
+    }
+
+    .gallery-tile {
+        padding: 12px;
+    }
+
+    .gallery-tile span {
+        font-size: 10px;
+    }
+}
+.faq-section{background:#f7f8f5}.faq-layout{display:grid;grid-template-columns:.75fr 1.25fr;gap:90px}.faq-intro h2{margin-bottom:18px}.faq-intro p{color:var(--muted);font-size:13px;max-width:330px}.faq-list details{border-bottom:1px solid #dfe7e2;padding:17px 0}.faq-list summary{list-style:none;cursor:pointer;font-size:14px;font-weight:750;color:var(--navy);display:flex;justify-content:space-between;gap:20px}.faq-list summary::-webkit-details-marker{display:none}.faq-list summary:after{content:"+";font-size:21px;color:var(--teal);font-weight:400;line-height:1}.faq-list details[open] summary:after{content:"−"}.faq-list details p{font-size:12px;color:var(--muted);line-height:1.8;max-width:650px;margin:13px 30px 3px 0}
+.booking-section{background:linear-gradient(115deg,#092d43,#105768);color:#fff}.booking-layout{display:grid;grid-template-columns:.8fr 1.2fr;gap:80px;align-items:center}.booking-copy h2{font-size:clamp(36px,4vw,49px);color:#fff}.booking-copy h2 em{color:#f4a66c}.booking-copy>p{max-width:390px;color:#c8dadd;font-size:14px;margin-top:20px}.booking-promise{font-size:11px;color:#d7e8e4;margin-top:35px}.booking-promise span{color:#f4a66c;margin-right:9px}.booking-form{background:#fff;color:var(--ink);padding:32px;border-radius:12px;box-shadow:0 20px 60px #001c2a45}.form-heading{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin-bottom:22px}.form-heading h3{font-size:20px;color:var(--navy);margin:0}.form-heading span{font-size:9px;color:var(--muted)}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}.form-grid label{display:flex;flex-direction:column;gap:6px;font-size:10px;font-weight:750;color:#425b65}.form-grid input,.form-grid select,.form-grid textarea{width:100%;border:1px solid #dfe7e6;border-radius:6px;padding:11px 12px;background:#fff;color:var(--ink);font-size:12px;outline:none;min-width:0}.form-grid input:focus,.form-grid select:focus,.form-grid textarea:focus{border-color:var(--teal);box-shadow:0 0 0 3px #167d7c18}.form-grid input.invalid,.form-grid select.invalid{border-color:#d85c50}.full-field{grid-column:1/-1}.form-grid textarea{resize:vertical}.form-submit{width:100%;margin-top:20px}.form-privacy{font-size:9px;color:#8b9b9e;text-align:center;margin:10px 0 0}.form-message{font-size:12px;font-weight:650;text-align:center;margin-top:12px;min-height:18px}.form-message.success{color:#16805e}.form-message.error{color:#bf493e}
+.footer{background:#061f30;color:#fff;padding:58px 0 20px}.footer-main{display:grid;grid-template-columns:1.1fr .8fr 1.2fr 1fr;gap:45px;padding-bottom:45px}.brand-light{color:#fff}.brand-light b{color:#8fcac0}.footer-brand p{font-size:12px;color:#a7bdc2;line-height:1.8;margin-top:20px}.footer-column{display:flex;flex-direction:column;gap:10px}.footer-column h4{font-size:11px;text-transform:uppercase;letter-spacing:1px;color:#8fcac0;margin:4px 0 9px}.footer-column a,.footer-column span{font-size:11px;color:#c1d0d1;line-height:1.7}.footer-column a:hover{color:#f4a66c}.map-placeholder{min-height:155px;border:1px solid #ffffff2b;border-radius:9px;background:radial-gradient(circle at 70% 30%,#2b7776,#123f52 60%,#0b3043);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:3px;color:#fff}.map-pin{font-size:24px;color:#f4a66c}.map-placeholder b{font-size:12px}.map-placeholder span:not(.map-pin){font-size:10px;color:#d2e1df}.map-placeholder small{font-size:8px;color:#8fb3b5;margin-top:5px}.footer-bottom{border-top:1px solid #ffffff24;padding-top:17px;display:flex;justify-content:space-between;color:#829da5;font-size:9px}.footer-bottom a{color:#c5d8d8}
+.lightbox{position:fixed;z-index:100;inset:0;background:#041a29ed;display:none;align-items:center;justify-content:center;padding:25px}.lightbox.open{display:flex}.lightbox-close{position:absolute;right:28px;top:18px;color:#fff;background:none;border:0;font-size:40px}.lightbox-art{width:min(850px,90vw);height:min(570px,75vh);border-radius:12px;display:flex;align-items:end;padding:35px;background:linear-gradient(145deg,#8dc5b5,#1c777b 50%,#0b3149);box-shadow:0 20px 70px #0008}.lightbox-art span{color:white;font:38px Georgia,serif}.reveal{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease}.reveal.visible{opacity:1;transform:translateY(0)}
+@media(max-width:1100px){.main-nav{gap:11px}.main-nav a{font-size:11px}.header-inner{gap:15px}.header-contact{display:none}.advantage-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:820px){.site-header{height:72px}.header-inner{justify-content:space-between}.menu-toggle{display:block;order:3}.header-book{margin-left:auto}.main-nav{display:none;position:absolute;top:71px;left:0;right:0;background:#fff;padding:18px 24px 24px;box-shadow:0 15px 25px #092d4317;flex-direction:column;align-items:stretch;gap:0}.main-nav.open{display:flex}.main-nav a{padding:11px 0;border-bottom:1px solid var(--line);font-size:13px}.hero{min-height:590px}.tour-grid{grid-template-columns:repeat(2,1fr)}.about-layout{gap:40px}.faq-layout{gap:40px}.booking-layout{gap:35px}.footer-main{grid-template-columns:1fr 1fr}.review-card{flex-basis:calc((100% - 18px)/2)}}
+@media(max-width:600px){.container{width:min(100% - 34px,480px)}.section{padding:70px 0}.brand{font-size:19px}.brand-mark{width:32px;height:32px}.header-book{padding:10px 11px;font-size:10px}.hero{min-height:590px}.hero h1{font-size:43px;letter-spacing:-1.8px}.hero-content>p{font-size:14px}.hero-note{margin-top:42px;font-size:10px}.hero-bottom{width:calc(100% - 34px);font-size:8px}.section-heading{display:block;margin-bottom:28px}.section-heading>p{margin-top:14px}.tour-grid{grid-template-columns:1fr;gap:15px}.tour-visual{height:160px}.advantage-grid{grid-template-columns:repeat(2,1fr);gap:10px}.advantage-card{padding:18px 15px;min-height:160px}.advantage-card h3{font-size:12px}.advantage-card p{font-size:10px}.stats-grid{gap:12px}.stat strong{font-size:34px}.stat span{font-size:8px;letter-spacing:.4px}.about-layout,.faq-layout,.booking-layout{grid-template-columns:1fr;gap:35px}.about-art{min-height:330px}.about-art-main strong{font-size:34px}.gallery-grid{grid-template-columns:1fr 1fr;grid-template-rows:155px 155px 155px;gap:9px}.tile-canyon{grid-row:span 2}.gallery-tile{padding:12px}.gallery-tile span{font-size:10px}.review-card{flex-basis:100%;padding:23px}.review-card blockquote{font-size:15px}.booking-form{padding:22px 17px}.form-heading{display:block}.form-heading span{display:block;margin-top:5px}.form-grid{gap:12px}.form-grid label{font-size:9px}.form-grid input,.form-grid select,.form-grid textarea{padding:10px;font-size:11px}.footer-main{grid-template-columns:1fr 1fr;gap:30px 18px}.map-placeholder{min-height:140px}.footer-bottom{font-size:8px}.faq-list summary{font-size:12px}.faq-list details p{font-size:11px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}}
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    display: block;
+}
+
+/* ===== Исправленная шапка Nova Travel ===== */
+
+/* ==================================
+   NOVA TRAVEL — ФИРМЕННОЕ ОФОРМЛЕНИЕ
+================================== */
+
+/* Шапка и оригинальный логотип */
+.site-header {
+    height: 90px;
+    min-height: 90px;
+    background: #fff;
+    border-bottom: 1px solid #eee9dd;
+    box-shadow: 0 3px 15px rgba(23, 61, 50, .05);
+}
+
+.header-inner {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.site-header .logo {
+    display: flex;
+    flex: 0 0 125px;
+    width: 125px;
+    height: 85px;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: #fff;
+}
+
+.site-header .logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+/* Навигация */
+.main-nav a {
+    color: #405b50;
+}
+
+.main-nav a:hover {
+    color: #bd914d;
+}
+
+/* Первый экран */
+.hero {
+    background:
+        radial-gradient(ellipse at 78% 35%, #347e70 0%, transparent 40%),
+        linear-gradient(115deg, #123c32 0%, #15554d 58%, #287c70 100%);
+}
+
+.hero h1 em {
+    color: #d6ad6b;
+}
+
+.hero-note .note-dot {
+    background: #d6ad6b;
+}
+
+.eyebrow-light {
+    color: #d6c18f;
+}
+
+/* Заголовки */
+.section h2 em {
+    color: #bd914d;
+}
+
+.eyebrow {
+    color: #287b70;
+}
+
+/* Кнопки */
+.btn-orange {
+    background: linear-gradient(135deg, #d8b574, #b98743);
+    color: #173d32;
+}
+
+.btn-orange:hover {
+    background: linear-gradient(135deg, #e5c98f, #c69a55);
+    box-shadow: 0 10px 22px rgba(189, 145, 77, .2);
+}
+
+/* Карточки туров */
+.tour-card {
+    border-color: #e8e8df;
+}
+
+.tour-card:hover {
+    box-shadow: 0 18px 40px rgba(23, 61, 50, .11);
+}
+
+.tour-tag {
+    color: #287b70;
+}
+
+.tour-book:hover {
+    background: #bd914d;
+    color: #fff;
+}
+
+/* Преимущества */
+.advantages-section,
+.faq-section {
+    background: #f7f5ef;
+}
+
+.advantage-card {
+    border-color: #ece8dc;
+}
+
+.adv-icon {
+    background: #f2eee3;
+    color: #a77c39;
+}
+
+/* Статистика */
+.stats-section {
+    background: linear-gradient(110deg, #173d32, #286b5c);
+}
+
+/* Галерея */
+.gallery-section {
+    background: #f7f4ec;
+}
+
+/* Отзывы */
+.stars {
+    color: #bd914d;
+}
+
+.slider-dots button.active {
+    background: #bd914d;
+}
+
+/* Блок бронирования */
+.booking-section {
+    background: linear-gradient(115deg, #173d32, #286b5c);
+}
+
+.booking-copy h2 em {
+    color: #d6ad6b;
+}
+
+.form-grid input:focus,
+.form-grid select:focus,
+.form-grid textarea:focus {
+    border-color: #287b70;
+    box-shadow: 0 0 0 3px rgba(40, 123, 112, .12);
+}
+
+/* Подвал */
+.footer {
+    background: #102d25;
+}
+
+.footer-column h4 {
+    color: #d6ad6b;
+}
+
+.footer-column a:hover {
+    color: #d6ad6b;
+}
+
+/* Планшеты */
+@media (max-width: 1100px) {
+    .site-header .logo {
+        flex-basis: 115px;
+        width: 115px;
+    }
+}
+
+/* Телефоны */
+@media (max-width: 820px) {
+    .site-header {
+        height: 72px;
+        min-height: 72px;
+    }
+
+    .site-header .logo {
+        flex-basis: 105px;
+        width: 105px;
+        height: 65px;
+    }
+
+    .main-nav {
+        background: #fff;
+    }
+}
+
+/* Увеличенная белая шапка */
+.site-header {
+    height: 112px;
+    min-height: 112px;
+    background: #ffffff;
+    border-bottom: 1px solid #eee8da;
+    box-shadow: 0 4px 18px rgba(23, 61, 50, .07);
+}
+
+.site-header .header-inner {
+    min-height: 112px;
+    height: 100%;
+    align-items: center;
+}
+
+/* Увеличенный логотип */
+.site-header .logo {
+    flex: 0 0 155px;
+    width: 155px;
+    height: 105px;
+    background: #ffffff;
+    padding: 2px;
+    overflow: visible;
+}
+
+.site-header .logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+@media (max-width: 1100px) {
+    .site-header .logo {
+        flex-basis: 135px;
+        width: 135px;
+        height: 100px;
+    }
+}
+
+@media (max-width: 820px) {
+    .site-header {
+        height: 88px;
+        min-height: 88px;
+    }
+
+    .site-header .header-inner {
+        min-height: 88px;
+    }
+
+    .site-header .logo {
+        flex-basis: 125px;
+        width: 125px;
+        height: 82px;
+    }
+}
+
+/* Навигационные ссылки */
+.main-nav a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 11px 16px;
+    border-radius: 30px;
+    color: #345449;
+    font-weight: 500;
+    transition: all .25s ease;
+}
+
+.main-nav a:hover {
+    color: #a77c39;
+    background: #f7f4ec;
+    transform: translateY(-2px);
+}
+
+.main-nav a.active {
+    color: #173d32;
+    background: #f3ead8;
+    box-shadow: inset 0 0 0 1px #dfc28d;
+}
+
+/* Основные кнопки */
+.btn,
+.header-book,
+.tour-book {
+    border-radius: 35px;
+    transition: all .28s ease;
+    font-weight: 600;
+}
+
+.btn-orange,
+.header-book {
+    background: linear-gradient(135deg, #dfc18a, #bd914d);
+    color: #173d32;
+    border: 1px solid #c69c59;
+    box-shadow: 0 5px 14px rgba(189, 145, 77, .16);
+}
+
+.btn-orange:hover,
+.header-book:hover {
+    background: linear-gradient(135deg, #ebd3a5, #c69a55);
+    color: #173d32;
+    transform: translateY(-2px);
+    box-shadow: 0 9px 22px rgba(189, 145, 77, .25);
+}
+
+/* Кнопки внутри карточек туров */
+.tour-book {
+    background: #173d32;
+    color: #ffffff;
+    border: 1px solid #173d32;
+}
+
+.tour-book:hover {
+    background: #bd914d;
+    border-color: #bd914d;
+    color: #173d32;
+    transform: translateY(-2px);
+}
+
+/* Ссылки с подчёркиванием */
+.text-link {
+    color: #287b70;
+    text-decoration: none;
+    transition: color .25s ease;
+}
+
+.text-link:hover {
+    color: #bd914d;
+}
+/* Логотип Nova Travel — более крупный и читаемый */
+.site-header {
+    height: 125px;
+    min-height: 125px;
+}
+
+.site-header .header-inner {
+    height: 100%;
+    min-height: 125px;
+}
+
+.site-header .logo {
+    flex: 0 0 205px;
+    width: 205px;
+    height: 120px;
+    padding: 0;
+    margin-right: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+}
+
+.site-header .logo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+/* Планшеты */
+@media (max-width: 1100px) {
+    .site-header .logo {
+        flex-basis: 180px;
+        width: 180px;
+        height: 110px;
+    }
+}
+
+/* Телефоны */
+@media (max-width: 820px) {
+    .site-header {
+        height: 95px;
+        min-height: 95px;
+    }
+
+    .site-header .header-inner {
+        min-height: 95px;
+    }
+
+    .site-header .logo {
+        flex-basis: 155px;
+        width: 155px;
+        height: 90px;
+        margin-right: 8px;
+    }
+}
+.main-nav {
+    gap: 5px;
+}
+
+.main-nav a {
+    font-size: 14px;
+    padding: 9px 12px;
+    white-space: nowrap;
+}
+
+.header-book,
+.btn,
+.tour-book {
+    font-size: 14px;
+    padding: 11px 18px;
+    min-height: 42px;
+}
+.main-nav a:first-child {
+    font-size: 17px !important;
+    padding: 9px 15px !important;
+    font-weight: 600 !important;
+    transform: none !important;
+    position: relative;
+    top: 0;
+    align-self: center;
+}
+/* Фотографии галереи Nova Travel */
+.gallery-tile {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.tile-canyon {
+    grid-row: span 2;
+    background-image: url("/static/img/sulak.png");
+}
+
+.tile-mountains {
+    background-image: url("/static/img/mountains.png");
+}
+
+.tile-derbent {
+    background-image: url("/static/img/derbent.png");
+}
+
+.tile-sand {
+    background-image: url("/static/img/sarykum.png");
+}
+
+.tile-village {
+    background-image: url("/static/img/gamsutl.png");
+}
+
+.tile-sea {
+    background-image: url("/static/img/caspian.png");
+}
+/* Фотографии в карточках туров */
+.tour-visual {
+    position: relative;
+    overflow: hidden;
+}
+
+.tour-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    position: absolute;
+    inset: 0;
+}
+
+.tour-tag {
+    position: relative;
+    z-index: 2;
+}
+/* Исправление блока отзывов */
+.reviews-section {
+    overflow: hidden;
+}
+
+.review-window {
+    width: 100%;
+    overflow: hidden;
+    min-width: 0;
+}
+
+.review-track {
+    display: flex;
+    gap: 18px;
+    transition: transform 0.45s ease;
+    will-change: transform;
+}
+
+.review-card {
+    flex: 0 0 calc((100% - 36px) / 3);
+    min-width: 0;
+    box-sizing: border-box;
+    height: auto;
+}
+
+.review-card blockquote {
+    overflow-wrap: break-word;
+}
+
+.review-author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.review-author small {
+    display: block;
+}
+
+@media (max-width: 820px) {
+    .review-card {
+        flex-basis: calc((100% - 18px) / 2);
+    }
+}
+
+@media (max-width: 600px) {
+    .review-card {
+        flex-basis: 100%;
+    }
+
+    .section-heading {
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+}
+/* Контакты Nova Travel */
+.contact-section {
+    padding: 100px 0;
+    text-align: center;
+}
+
+.contact-content {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.contact-content h2 {
+    margin: 15px 0;
+}
+
+.contact-content p {
+    max-width: 600px;
+    margin: 0 auto 35px;
+    line-height: 1.8;
+    color: #777;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.contact-links a {
+    padding: 15px 25px;
+    border-radius: 30px;
+    background: #267d82;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.contact-links a:hover {
+    background: #185b60;
+    transform: translateY(-3px);
+}
+
+@media (max-width: 600px) {
+    .contact-links {
+        flex-direction: column;
+    }
+
+    .contact-links a {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+.contact-section {
+    padding: 90px 0;
+    text-align: center;
+}
+
+.contact-content {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.contact-content p {
+    line-height: 1.8;
+    margin: 20px auto 35px;
+    max-width: 620px;
+}
+
+.contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.contact-links a {
+    display: inline-block;
+    padding: 15px 25px;
+    background: #267d82;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.contact-links a:hover {
+    background: #185b60;
+    transform: translateY(-3px);
+}
+
+@media (max-width: 600px) {
+    .contact-links {
+        flex-direction: column;
+    }
+
+    .contact-links a {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+/* Дополнительные поля формы и антиспам */
+.honeypot {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+.privacy-consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  grid-column: 1 / -1;
+  font-size: 13px;
+  line-height: 1.5;
+  color: inherit;
+}
+.privacy-consent input {
+  flex: 0 0 auto;
+  width: 17px;
+  height: 17px;
+  margin-top: 2px;
+  accent-color: #d98a42;
+}
+.privacy-consent input.invalid { outline: 2px solid #d94a4a; outline-offset: 2px; }

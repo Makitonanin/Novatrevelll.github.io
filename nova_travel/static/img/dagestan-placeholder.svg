@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-labelledby="title">
+  <title id="title">Nova Travel — горный пейзаж Дагестана</title>
+  <defs>
+    <linearGradient id="sky" x2="0" y2="1"><stop stop-color="#a8d8d0"/><stop offset="1" stop-color="#e8d6b6"/></linearGradient>
+    <linearGradient id="mountain" x2="0" y2="1"><stop stop-color="#347e7c"/><stop offset="1" stop-color="#103b53"/></linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#sky)"/>
+  <path d="M0 330 170 120l105 120L430 65l180 220 95-105 95 120v150H0Z" fill="url(#mountain)"/>
+  <path d="m365 145 65-80 70 86-55-25-24 27-24-24Z" fill="#f5f0e5" opacity=".85"/>
+  <path d="M0 365 190 250l110 80 170-115 180 130 150-100v205H0Z" fill="#0b344b" opacity=".72"/>
+  <path d="M0 390q180-55 360 0t440-5v65H0Z" fill="#167d7c"/>
+</svg>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#092d43">
+  <meta name="description" content="Nova Travel — туры и экскурсии по Дагестану. Сулакский каньон, Гамсутль, Дербент и другие маршруты.">
+  <title>Nova Travel — путешествия по Дагестану</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo">
+    <img
+        src="{{ url_for('static', filename='img/logo.png') }}"
+        alt="Nova Travel"
+    >
+</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Открыть меню" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="main-nav" id="mainNav">
+        <a href="#home">Главная</a><a href="#tours">Туры</a><a href="#advantages">Почему мы</a>
+        <a href="#gallery">Галерея</a><a href="#reviews">Отзывы</a><a href="#faq">FAQ</a><a href="#contacts">Контакты</a>
+      </nav>
+      <div class="header-contact"><a href="tel:+79886509900">8 988 650-99-00</a><small>Ежедневно, 9:00–19:00</small></div>
+      <a class="btn btn-small btn-orange header-book" href="#booking">Забронировать</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-pattern" aria-hidden="true"></div>
+      <div class="container hero-content reveal">
+        <span class="eyebrow eyebrow-light">Откройте Кавказ вместе с нами</span>
+        <h1>Туры и экскурсии<br>по Дагестану с <em>Nova Travel</em></h1>
+        <p>Живописные горы, чистые пляжи, уникальная культура и гостеприимство — путешествие, которое останется с вами.</p>
+        <div class="hero-actions"><a class="btn btn-orange" href="#tours">Выбрать тур <span>↗</span></a><a class="btn btn-glass" href="#contacts">Связаться</a></div>
+        <div class="hero-note"><span class="note-dot"></span> Покажем настоящий Дагестан — с заботой о каждой детали</div>
+      </div>
+      <div class="hero-bottom"><span>42°58′ N · 47°30′ E</span><span>Республика Дагестан</span></div>
+    </section>
+
+    <section class="section tours-section" id="tours">
+      <div class="container">
+        <div class="section-heading reveal"><div><span class="eyebrow">Маршруты для вдохновения</span><h2>Выбери своё <em>путешествие</em></h2></div><p>От одного дня до большого приключения — найдём маршрут под ваш ритм.</p></div>
+        <div class="tour-grid" id="tourGrid"><div class="loading-state">Загружаем маршруты…</div></div>
+        <p class="catalog-note">Стоимость указана за одного человека. Точная программа и условия уточняются при подтверждении бронирования.</p>
+      </div>
+    </section>
+
+    <section class="section advantages-section" id="advantages">
+      <div class="container">
+        <div class="center-heading reveal"><span class="eyebrow">Ваш комфорт — наш приоритет</span><h2>Что делает наши туры <em>особенными</em></h2><p>Мы продумываем путешествие целиком, чтобы вы могли просто наслаждаться моментом.</p></div>
+        <div class="advantage-grid">
+          <article class="advantage-card reveal"><span class="adv-icon">☀</span><h3>Поддержка 24/7</h3><p>Остаёмся на связи до, во время и после поездки.</p></article>
+          <article class="advantage-card reveal"><span class="adv-icon">⌖</span><h3>Продуманные маршруты</h3><p>Сочетаем главные места и локации вдали от суеты.</p></article>
+          <article class="advantage-card reveal"><span class="adv-icon">🚙</span><h3>Собственный автопарк</h3><p>Комфортный транспорт для горных дорог и дальних маршрутов.</p></article>
+          <article class="advantage-card reveal"><span class="adv-icon">✦</span><h3>Профессиональная команда</h3><p>Опытные гиды, водители и внимательные координаторы.</p></article>
+          <article class="advantage-card reveal"><span class="adv-icon">⌂</span><h3>Отельная база</h3><p>Помогаем подобрать размещение под формат поездки.</p></article>
+          <article class="advantage-card reveal"><span class="adv-icon">♡</span><h3>Гостеприимство</h3><p>Знакомим с традициями и местной кухней с уважением к культуре.</p></article>
+          <article class="advantage-card reveal"><span class="adv-icon">19</span><h3>Лет опыта</h3><p>Знаем регион и умеем превращать поездки в яркие истории.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats-section">
+      <div class="container stats-grid">
+        <div class="stat reveal"><strong class="counter" data-target="19">0</strong><span>лет опыта</span></div>
+        <div class="stat reveal"><strong class="counter" data-target="35" data-suffix="+">0</strong><span>туров и экскурсий</span></div>
+        <div class="stat reveal"><strong class="counter" data-target="200000" data-suffix="+">0</strong><span>довольных клиентов</span></div>
+      </div>
+    </section>
+
+    <section class="section about-section" id="why">
+      <div class="container about-layout">
+        <div class="about-art reveal"><div class="about-art-main"><span>ДАГЕСТАН</span><strong>Место,<br>куда хочется<br>вернуться.</strong></div><div class="about-stamp">NOVA<br>TRAVEL<br><b>●</b></div></div>
+        <div class="about-copy reveal"><span class="eyebrow">Больше, чем экскурсия</span><h2>Почему путешественники выбирают <em>нас</em></h2>
+          <p>Nova Travel — команда, которая искренне любит Дагестан и хочет делиться его красотой. Мы открываем гостям горные аулы, каньоны, древние города и побережье Каспия, знакомим с историей и традициями региона.</p>
+          <p>Для нас хорошая поездка — это не только красивые виды. Это понятная организация, комфортная дорога, внимательное отношение к каждому участнику и живые впечатления без лишней спешки.</p>
+          <a class="text-link" href="#booking">Спланировать поездку <span>→</span></a>
+        </div>
+      </div>
+    </section>
+
+    
+<section class="section gallery-section" id="gallery">
+  <div class="container">
+    <div class="section-heading reveal">
+      <div>
+        <span class="eyebrow">Моменты, которые остаются</span>
+        <h2>Галерея <em>впечатлений</em></h2>
+      </div>
+      <p>Нажмите на кадр, чтобы рассмотреть атмосферу путешествия.</p>
+    </div>
+
+    <div class="gallery-grid">
+      <button class="gallery-tile tile-canyon" data-title="Сулакский каньон">
+        <span>01 / Сулакский каньон</span>
+      </button>
+
+      <button class="gallery-tile tile-mountains" data-title="Горные дороги">
+        <span>02 / Горные дороги</span>
+      </button>
+      <button class="gallery-tile tile-sand" data-title="Бархан Сарыкум">
+        <span>03 / Бархан Сарыкум</span>
+      </button>
+
+      <button class="gallery-tile tile-village" data-title="Аул в горах">
+        <span>04 / Аул в горах</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+
+    <section class="reviews-section section" id="reviews">
+      <div class="container">
+        <div class="section-heading reveal"><div><span class="eyebrow">Истории наших гостей</span><h2>Тёплые слова <em>путешественников</em></h2></div><div class="slider-controls"><button id="prevReview" aria-label="Предыдущий отзыв">←</button><button id="nextReview" aria-label="Следующий отзыв">→</button></div></div>
+        <div class="review-window reveal"><div class="review-track" id="reviewTrack">
+          <article class="review-card"><div class="stars">★★★★★</div><blockquote>«Сулакский каньон превзошёл все ожидания! Организация отличная, гид рассказывал увлекательно, а виды просто невозможно забыть».</blockquote><div class="review-author"><span class="avatar">АК</span><div><b>Анна К.</b><small>Поездка на Сулакский каньон</small></div></div></article>
+          <article class="review-card"><div class="stars">★★★★★</div><blockquote>«Были в Дагестане впервые и влюбились в регион. Всё чётко по времени, комфортная машина и очень душевная атмосфера».</blockquote><div class="review-author"><span class="avatar">МР</span><div><b>Марат Р.</b><small>Тур «Дагестан за 3 дня»</small></div></div></article>
+          <article class="review-card"><div class="stars">★★★★★</div><blockquote>«Отдельное спасибо за маршрут в Гамсутль. Увидели невероятные места и узнали много интересного о культуре. Обязательно вернёмся!».</blockquote><div class="review-author"><span class="avatar">ЕС</span><div><b>Елена С.</b><small>Гамсутль и Гуниб</small></div></div></article>
+          <article class="review-card"><div class="stars">★★★★★</div><blockquote>«Путешествовали семьёй, всем было комфортно. Дети в восторге от бархана, мы — от гостеприимства и красивых видов».</blockquote><div class="review-author"><span class="avatar">ДВ</span><div><b>Дарья В.</b><small>Бархан Сарыкум</small></div></div></article>
+              </div>
+      </div>
+      <div class="review-dots" id="reviewDots"></div>
+    </div>
+    </section>
+
+    <section class="section faq-section" id="faq">
+      <div class="container faq-layout">
+        <div class="faq-intro reveal"><span class="eyebrow">Есть вопросы?</span><h2>Ответы на <em>важное</em></h2><p>Собрали то, что чаще всего спрашивают перед путешествием. Если не нашли ответ — позвоните нам.</p><a class="text-link" href="tel:+79886509900">8 988 650-99-00 <span>→</span></a></div>
+        <div class="faq-list reveal">
+          <details><summary>Как забронировать тур?</summary><p>Оставьте заявку на сайте или позвоните нам. Мы уточним дату, количество участников и детали маршрута, после чего подтвердим бронирование.</p></details>
+          <details><summary>Как происходит оплата?</summary><p>Способ и сроки оплаты согласуем при подтверждении поездки. Не переводите деньги по непроверенным реквизитам — дождитесь ответа менеджера.</p></details>
+          <details><summary>Какую одежду взять с собой?</summary><p>Выбирайте удобную одежду по погоде, обувь с нескользящей подошвой и головной убор. Для посещения религиозных и традиционных мест рекомендуем сдержанную одежду.</p></details>
+          <details><summary>Подойдёт ли тур тем, кто впервые в Дагестане?</summary><p>Да. Мы поможем выбрать маршрут по интересам и расскажем, что стоит увидеть в первую поездку.</p></details>
+          <details><summary>Насколько безопасны поездки?</summary><p>Маршруты планируются с учётом дорожных и погодных условий. Следуйте рекомендациям гида и сообщайте заранее об ограничениях по здоровью или мобильности.</p></details>
+          <details><summary>Можно ли перенести поездку или вернуть оплату?</summary><p>Условия переноса и возврата зависят от выбранного тура и времени до выезда. Менеджер сообщит точные условия до подтверждения бронирования.</p></details>
+          <details><summary>Можно ли путешествовать с детьми?</summary><p>Многие маршруты подходят для семей. Перед бронированием обсудите возраст детей и длительность дороги с менеджером.</p></details>
+          <details><summary>Туры проходят в группе или индивидуально?</summary><p>Формат зависит от программы и даты. Уточните желаемый формат — мы расскажем о доступных вариантах.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="booking-section section" id="booking">
+      <div class="container booking-layout">
+        <div class="booking-copy reveal"><span class="eyebrow eyebrow-light">Ваше путешествие начинается здесь</span><h2>Готовы увидеть <em>Дагестан?</em></h2><p>Оставьте заявку — мы свяжемся с вами, ответим на вопросы и поможем подготовить поездку.</p><div class="booking-promise"><span>✓</span> Никаких обязательств — сначала всё обсудим</div></div>
+        <form class="booking-form reveal" id="bookingForm" novalidate>
+          <div class="form-heading"><h3>Заявка на путешествие</h3><span>Поля со звёздочкой обязательны</span></div>
+          <div class="form-grid">
+            <label>Ваше имя *<input name="name" type="text" placeholder="Как к вам обращаться" minlength="2" required></label>
+            <label>Телефон *<input name="phone" id="phoneInput" type="tel" placeholder="+7 (___) ___-__-__" required></label>
+            <label class="full-field">Выберите тур *<select name="tour_id" id="tourSelect" required><option value="">Загрузка туров…</option></select></label>
+            <label>Дата поездки *<input name="date" id="dateInput" type="date" required></label>
+            <label>Количество человек *<select name="people" required><option value="1">1 человек</option><option value="2" selected>2 человека</option><option value="3">3 человека</option><option value="4">4 человека</option><option value="5">5 человек</option><option value="6">6 человек</option><option value="7">7 человек</option><option value="8">8 человек</option><option value="9">9 человек</option><option value="10">10 человек</option><option value="11">11 человек</option><option value="12">12 человек</option><option value="13">13 человек</option><option value="14">14 человек</option><option value="15">15 человек</option><option value="16">16 человек</option><option value="17">17 человек</option><option value="18">18 человек</option><option value="19">19 человек</option><option value="20">20 человек</option></select></label>
+            <label>Промокод<input name="promo" type="text" placeholder="Если есть"></label>
+            <label class="full-field">Комментарий<textarea name="comment" rows="3" placeholder="Пожелания, вопросы, удобное время для звонка"></textarea></label>
+          </div>
+          <label class="honeypot" aria-hidden="true">Не заполняйте это поле<input name="website" type="text" tabindex="-1" autocomplete="off"></label>
+          <label class="privacy-consent"><input name="consent" type="checkbox" required> Я согласен(на) на обработку персональных данных для ответа на заявку.</label>
+          <button class="btn btn-orange form-submit" type="submit">Отправить заявку <span>→</span></button>
+          <p class="form-privacy">Отправляя форму, вы разрешаете использовать указанные данные только для связи по вашему обращению. Добавьте на сайт отдельную политику конфиденциальности перед публикацией.</p>
+          <div class="form-message" id="formMessage" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="contacts">
+    <div class="container footer-main">
+      <div class="footer-brand"><a class="brand brand-light" href="#home"><span class="brand-mark">N</span><span>Nova <b>Travel</b></span></a><p>Открываем Дагестан<br>через впечатления и заботу.</p></div>
+      <div class="footer-column"><h4>Навигация</h4><a href="#tours">Туры</a><a href="#advantages">Почему мы</a><a href="#gallery">Галерея</a><a href="#faq">Вопросы и ответы</a></div>
+      <div class="footer-column"><h4>Контакты</h4><a href="tel:+79886509900">8 988 650-99-00</a><span>ул. Гагарина 34, г. Махачкала,<br>Республика Дагестан</span><span>Ежедневно с 9:00 до 19:00</span></div>
+      <div class="map-placeholder"><span class="map-pin">⌖</span><b>Nova Travel</b><span>г. Махачкала,<br>ул. Гагарина 34</span><small>Карта-заглушка</small></div>
+    </div>
+    <div class="container footer-bottom"><span>© <span id="currentYear"></span> Nova Travel. Все права защищены.</span><a href="#home">Наверх ↑</a></div>
+  </footer>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true"><button class="lightbox-close" id="lightboxClose" aria-label="Закрыть">×</button><div class="lightbox-art" id="lightboxArt"><span id="lightboxTitle"></span></div></div>
+  <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+</body>
+</html>
